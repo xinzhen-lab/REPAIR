@@ -3,10 +3,11 @@ We propose a novel unified reciprocal assistance imputation-representation learn
 
 
 # REPAIR
-
 The proposed REPAIR adapts to varying scenarios with arbitrary missing of MRI sequences, rendering it a practical tool for handing comprehensive real-word medical data in complex clinical settings. REPAIR facilitates a cooperative process between missing value imputation and multi-sequence MRI fusion by leveraging existing samples to inform the imputation of missing values. This, in turn, facilitates the learning of a shared latent representation, which reciprocally guides more accurate imputation of missing values. To tailor the learned representation for downstream tasks, a novel ambiguity-aware intercorrelation regularization is introduced to equip REPAIR by correlating imputation ambiguity and its impacts conveying to the learned representation via a fuzzy paradigm. Additionally, a multimodal structural calibration constraint is devised to correct for the structural shift caused by missing data, ensuring structural consistency between the learned representations and the actual data. The proposed methodology is extensively validated on eight GM datasets with incomplete MRI sequences and six clinical datasets from other diseases with incomplete imaging modalities.
 ![image](https://github.com/user-attachments/assets/da41fd58-84da-44ac-b23a-3d927883e6ab)
 
+# Model training & validation
+We opted to tune one parameter at a time while keeping the others fixed. Varying missing rates ranging from 10% to 60% are simulated to validate the proposed method’s capability in handling incomplete MRI sequences. The learned representation was subsequently used to train a typical logistic regression classifier (with ‘l_2’ penalty while other parameters set as default) for all tasks across all evaluated datasets. We evaluated the method via a 5-fold cross-validation strategy.
 
 # Usage
 Input: Enter a training set (tr_X) and a testing set (tr_Y) containing the missing sequences, and a label set (tr_Y) for the training set
