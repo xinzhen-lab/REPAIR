@@ -35,7 +35,7 @@ lambda6=1e+1;%The range is [1e+0,1e+1,1e+2]
 lambda7=1e+2;%The range is [1e+1,1e+2,1e+3]
 lambda8=1e+1;%The range is [1e+0,1e+1,1e+2]
 
-%% Procedure£º 5-fold cross-validation
+%% ProcedureÂ£Âº 5-fold cross-validation
 for j=1:nfold          
     fprintf(['nfold=',num2str(j),'\n']);
     
@@ -145,12 +145,12 @@ for j=1:nfold
     
 %% Find V of the testing data       
     [Vttend] = Vtest(motai,mshu,tt_X,Vquan,k,Q,T,P);
-    V1_train = [tr_Y;V];         
-    V1_test = [tt_Y;Vttend];
+    V_train = [tr_Y;V];         
+    V_test = [tt_Y;Vttend];
     
 %% Save V files     
-    csvwrite(['.\percent0.2_Vtraintest\',num2str(Vquan),num2str(Vqushu),'_',num2str(iter),num2str(fanshi),num2str(Wqushu),'\V1_train4_',num2str(j),'_',num2str(k),'_',num2str(lambda0),'_',num2str(lambda1),'_',num2str(lambda2),'_',num2str(lambda3),'_',num2str(lambda4),'_',num2str(lambda5),'_',num2str(lambda6),'_',num2str(lambda7),'_',num2str(lambda8),'_',num2str(lambda9),'.csv'],V1_train);                                       
-    csvwrite(['.\percent0.2_Vtraintest\',num2str(Vquan),num2str(Vqushu),'_',num2str(iter),num2str(fanshi),num2str(Wqushu),'\V1_test4_',num2str(j),'_',num2str(k),'_',num2str(lambda0),'_',num2str(lambda1),'_',num2str(lambda2),'_',num2str(lambda3),'_',num2str(lambda4),'_',num2str(lambda5),'_',num2str(lambda6),'_',num2str(lambda7),'_',num2str(lambda8),'_',num2str(lambda9),'.csv'],V1_test);
+    csvwrite(['.\percent0.2_Vtraintest\',num2str(Vquan),num2str(Vqushu),'_',num2str(iter),num2str(fanshi),num2str(Wqushu),'\V1_train4_',num2str(j),'_',num2str(k),'_',num2str(lambda0),'_',num2str(lambda1),'_',num2str(lambda2),'_',num2str(lambda3),'_',num2str(lambda4),'_',num2str(lambda5),'_',num2str(lambda6),'_',num2str(lambda7),'_',num2str(lambda8),'_',num2str(lambda9),'.csv'],V_train);                                       
+    csvwrite(['.\percent0.2_Vtraintest\',num2str(Vquan),num2str(Vqushu),'_',num2str(iter),num2str(fanshi),num2str(Wqushu),'\V1_test4_',num2str(j),'_',num2str(k),'_',num2str(lambda0),'_',num2str(lambda1),'_',num2str(lambda2),'_',num2str(lambda3),'_',num2str(lambda4),'_',num2str(lambda5),'_',num2str(lambda6),'_',num2str(lambda7),'_',num2str(lambda8),'_',num2str(lambda9),'.csv'],V_test);
         
 end     
   
