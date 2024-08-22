@@ -10,6 +10,8 @@ The proposed REPAIR adapts to varying scenarios with arbitrary missing of MRI se
 We opted to tune one parameter at a time while keeping the others fixed. Varying missing rates ranging from 10% to 60% are simulated to validate the proposed method’s capability in handling incomplete MRI sequences. The learned representation was subsequently used to train a typical logistic regression classifier (with ‘l_2’ penalty while other parameters set as default) for all tasks across all evaluated datasets. We evaluated the method via a 5-fold cross-validation strategy.The classification performance was quantified by several metrics, including the area under curve (AUC), accuracy (ACC), balanced accuracy (BAcc), sensitivity (SEN) and specificity (SPE).
 
 # Usage
+In the main file："main.m"
+
 Input: Enter a training set (tr_X) and a testing set (tt_X) containing the missing sequences, and a label set (tr_Y) for the training set
 
 Initialize: Data imputation matrix (Q), Latent representation matrix (V), Projection matrix (P), Reconstruction matrix (H)
