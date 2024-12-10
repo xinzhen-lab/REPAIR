@@ -1,0 +1,13 @@
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+F	o	l	d	s	 	=	 	1
+1	0.001	1000	0.77387	0.87714	0.54996	0.54463
+F	o	l	d	s	 	=	 	1
